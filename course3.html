@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розклад 3 Курсу (Кр-3*) | Коледж</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="course" data-course-id="3">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand" style="text-decoration: none;">
+          <img src="logo.svg" alt="МППК Логотип" style="height: 48px; width: auto; object-fit: contain;">
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Головна</a></li>
+            <li><a href="course1.html" class="nav-link">1 Курс <span class="badge">Кр-1*</span></a></li>
+            <li><a href="course2.html" class="nav-link">2 Курс <span class="badge">Кр-2*</span></a></li>
+            <li><a href="course3.html" class="nav-link active">3 Курс <span class="badge">Кр-3*</span></a></li>
+            <li><a href="course-t.html" class="nav-link">Курс Т <span class="badge">Т-1/2</span></a></li>
+            <li><a href="teachers.html" class="nav-link">👨‍🏫 Викладачі</a></li>
+            <li><a href="bells.html" class="nav-link">🔔 Дзвінки</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h1 class="hero-title">Розклад 3 Курсу</h1>
+          <p class="hero-subtitle">
+            Відображається розклад виключно третього курсу (групи <strong>Кр-31</strong>, <strong>Кр-32</strong>, <strong>Кр-33</strong>).
+            Натисніть на назву уроку для перегляду профілю та розкладу викладача.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="window.print()">🖨️ Роздрукувати розклад</button>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-pill">
+          <span class="pulse-dot"></span>
+          <span id="current-date-badge">Поточний день</span>
+        </div>
+        <div class="meta-pill">
+          📅 <span id="current-week-badge">Чисельник / Знаменник</span>
+        </div>
+        <div class="meta-pill">
+          💡 <strong>Підказка:</strong> Клікніть на предмет, щоб відкрити інформацію про викладача
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" style="flex-grow: 1;">
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <!-- Filter by Group -->
+      <div class="controls-row">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <span class="controls-label">👥 Група:</span>
+          <div class="pill-group" id="group-filters">
+            <!-- Dynamically populated: All, Кр-31, Кр-32, Кр-33 -->
+          </div>
+        </div>
+
+        <!-- Search -->
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="schedule-search" placeholder="Пошук предмета, кабінету, викладача...">
+        </div>
+      </div>
+
+      <!-- Filter by Day -->
+      <div class="controls-row" style="border-top: 1px solid var(--border-color); padding-top: 14px;">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <span class="controls-label">📅 День:</span>
+          <div class="pill-group" id="day-filters">
+            <!-- Dynamically populated: All, Пн, Вт, Ср, Чт, Пт -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule Display Container -->
+    <div id="schedule-display" class="schedule-container">
+      <!-- Dynamically generated schedule cards will appear here -->
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <strong>3 Курс — Розклад занять коледжу</strong> © 2026.
+        </div>
+        <div>
+          <a href="index.html">← Повернутися на головну</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

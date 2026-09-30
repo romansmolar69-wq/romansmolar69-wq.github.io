@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розклад дзвінків | Коледж</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="bells">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand" style="text-decoration: none;">
+          <img src="logo.svg" alt="МППК Логотип" style="height: 48px; width: auto; object-fit: contain;">
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Головна</a></li>
+            <li><a href="course1.html" class="nav-link">1 Курс <span class="badge">Кр-1*</span></a></li>
+            <li><a href="course2.html" class="nav-link">2 Курс <span class="badge">Кр-2*</span></a></li>
+            <li><a href="course3.html" class="nav-link">3 Курс <span class="badge">Кр-3*</span></a></li>
+            <li><a href="course-t.html" class="nav-link">Курс Т <span class="badge">Т-1/2</span></a></li>
+            <li><a href="teachers.html" class="nav-link">👨‍🏫 Викладачі</a></li>
+            <li><a href="bells.html" class="nav-link active">🔔 Дзвінки</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Графік дзвінків та тривалість занять</h1>
+      <p class="hero-subtitle">
+        Тривалість однієї академічної пари становить 1 год. 20 хв. (або 2 академічні години по 40/45 хв).
+        Після другої пари передбачено велику обідню перерву (30 хвилин).
+      </p>
+
+      <div class="hero-meta">
+        <div class="meta-pill">
+          <span class="pulse-dot"></span>
+          <span id="current-date-badge">Поточний день</span>
+        </div>
+        <div class="meta-pill">
+          ⏰ Початок занять: 08:30
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" style="flex-grow: 1;">
+
+    <div class="bells-table-wrapper">
+      <table class="bells-table">
+        <thead>
+          <tr>
+            <th style="width: 80px;">№</th>
+            <th>Пара</th>
+            <th>Час проведення</th>
+            <th>Перерва після пари</th>
+          </tr>
+        </thead>
+        <tbody id="bells-table-body">
+          <!-- Populated dynamically via script.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Additional info card -->
+    <div style="background: white; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 50px;">
+      <h3 style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 10px;">
+        📌 Примітки до навчального розкладу:
+      </h3>
+      <ul style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; padding-left: 20px;">
+        <li>Вхід до навчальних аудиторій та лабораторій розпочинається за 10 хвилин до першого дзвінка.</li>
+        <li>У разі повітряної тривоги всі учасники освітнього процесу переходять до найближчого укриття коледжу.</li>
+        <li>Заняття можуть коригуватися відповідно до тижня: <strong>Чисельник</strong> або <strong>Знаменник</strong>.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <strong>Розклад дзвінків коледжу</strong> © 2026.
+        </div>
+        <div>
+          <a href="index.html">← Повернутися на головну</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

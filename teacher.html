@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профіль та розклад викладача | Коледж</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="teacher">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand" style="text-decoration: none;">
+          <img src="logo.svg" alt="МППК Логотип" style="height: 48px; width: auto; object-fit: contain;">
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Головна</a></li>
+            <li><a href="course1.html" class="nav-link">1 Курс <span class="badge">Кр-1*</span></a></li>
+            <li><a href="course2.html" class="nav-link">2 Курс <span class="badge">Кр-2*</span></a></li>
+            <li><a href="course3.html" class="nav-link">3 Курс <span class="badge">Кр-3*</span></a></li>
+            <li><a href="course-t.html" class="nav-link">Курс Т <span class="badge">Т-1/2</span></a></li>
+            <li><a href="teachers.html" class="nav-link active">👨‍🏫 Викладачі</a></li>
+            <li><a href="bells.html" class="nav-link">🔔 Дзвінки</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Navigation Back -->
+  <section class="hero" style="padding: 24px 0 20px;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+        <a href="javascript:history.back()" class="back-link" style="margin: 0;">
+          ← Повернутися назад до розкладу
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">Швидкий перехід:</span>
+          <select id="teacher-selector" style="padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.9rem; background: white; outline: none; cursor: pointer;">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" style="flex-grow: 1;">
+
+    <!-- Teacher Profile Card -->
+    <div class="teacher-profile-card">
+      <div class="teacher-header">
+        <div class="teacher-avatar-large" id="teacher-avatar">
+          👨‍🏫
+        </div>
+
+        <div class="teacher-info-main">
+          <h1 class="teacher-name" id="teacher-name">Завантаження...</h1>
+          <div class="teacher-title" id="teacher-title">Посада викладача</div>
+          <div class="teacher-dept" id="teacher-dept">Кафедра / Циклова комісія</div>
+
+          <div style="margin-top: 14px;">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
+              Дисципліни, які викладає:
+            </div>
+            <div class="teacher-subjects-list" id="teacher-subjects">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contacts & Room Info -->
+      <div class="teacher-contacts-grid">
+        <div class="contact-card">
+          <div class="contact-label">📧 Електронна пошта</div>
+          <div class="contact-value" id="teacher-email">—</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-label">📞 Телефон кафедри</div>
+          <div class="contact-value" id="teacher-phone">—</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-label">📍 Аудиторія / Кабінет</div>
+          <div class="contact-value" id="teacher-room">—</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-label">⏰ Години консультацій</div>
+          <div class="contact-value" id="teacher-consultations">—</div>
+        </div>
+      </div>
+
+      <!-- Bio / Note -->
+      <div class="teacher-bio">
+        <strong>Про викладача:</strong>
+        <p id="teacher-bio" style="margin-top: 4px; color: #334155;"></p>
+      </div>
+
+      <!-- Schedule of this Teacher -->
+      <div id="teacher-schedule-container">
+        <!-- Weekly schedule for this teacher will be rendered dynamically -->
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <strong>Розклад викладачів коледжу</strong> © 2026.
+        </div>
+        <div>
+          <a href="teachers.html">Переглянути всіх викладачів →</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

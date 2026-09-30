@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Викладачі коледжу | Довідник та розклад</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="teachers-list">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand" style="text-decoration: none;">
+          <img src="logo.svg" alt="МППК Логотип" style="height: 48px; width: auto; object-fit: contain;">
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Головна</a></li>
+            <li><a href="course1.html" class="nav-link">1 Курс <span class="badge">Кр-1*</span></a></li>
+            <li><a href="course2.html" class="nav-link">2 Курс <span class="badge">Кр-2*</span></a></li>
+            <li><a href="course3.html" class="nav-link">3 Курс <span class="badge">Кр-3*</span></a></li>
+            <li><a href="course-t.html" class="nav-link">Курс Т <span class="badge">Т-1/2</span></a></li>
+            <li><a href="teachers.html" class="nav-link active">👨‍🏫 Викладачі</a></li>
+            <li><a href="bells.html" class="nav-link">🔔 Дзвінки</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Довідник викладачів</h1>
+      <p class="hero-subtitle">
+        Знайдіть будь-якого викладача коледжу за прізвищем, назвою предмета або кафедрою.
+        Натисніть на картку, щоб переглянути його повний тижневий розклад та години консультацій.
+      </p>
+
+      <div style="margin-top: 20px; max-width: 500px;">
+        <div class="search-input-wrapper" style="box-shadow: var(--shadow-sm);">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="teachers-search" placeholder="Пошук викладача, предмета або кафедри...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" style="flex-grow: 1;">
+    <div class="teachers-grid" id="teachers-grid">
+      <!-- Dynamically generated teacher cards will appear here -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <strong>Довідник викладачів коледжу</strong> © 2026.
+        </div>
+        <div>
+          <a href="index.html">← Повернутися на головну</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
